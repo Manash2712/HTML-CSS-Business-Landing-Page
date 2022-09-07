@@ -30,6 +30,7 @@ svg{
     padding-top: 10px;
     list-style-type: none;
     display: flex;
+    flex-wrap: wrap;
     column-gap: 50px;
     justify-content: flex-end;
     color: #e4e6ec;
@@ -49,6 +50,7 @@ svg{
 .nav-bottom{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     padding: 45px 80px;
 }
 .nav-left{
@@ -125,11 +127,13 @@ svg{
 .numbers-data{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     margin: 40px 20px;
     /* width: 80%; */
     justify-content: center;
     align-items: center;
     column-gap: 15%;
+    row-gap: 30px;
 }
 .numbers-data>div{
     display: flex;
@@ -233,7 +237,7 @@ svg{
 }
 .service>div:last-child button{
     margin-top: 40px;
-    
+    margin-bottom: 30px;
 }
 button{height: 35px;
     width: 120px;
@@ -266,6 +270,7 @@ button{height: 35px;
 .team-members{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     margin-top: 50px;
     column-gap: 120px;
 }
@@ -312,6 +317,7 @@ footer{
 .socialmedia-icons{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     width: 20%;
     justify-content: space-around;
 }
@@ -327,6 +333,7 @@ footer{
 .footer-bottom{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-around;
     padding-bottom: 40px;
 }
@@ -341,4 +348,175 @@ footer{
 .footer-list-item-selected{
     color: #fff;
     font-size: 15px;
+}
+
+@media screen and (max-width: 922px) {
+    .nav-bottom{
+        flex-direction: column;
+        padding: 5%;
+    }
+    .nav-left{  
+        margin-left: auto;
+        margin-right: auto; 
+    }
+    .nav-right{
+        padding-left: 0px;
+        padding-top: 40px;
+    }
+    .nav-right h2{
+        word-wrap: normal;
+        inline-size: auto;
+    }
+    .nav-right p{
+        padding-top: 20px;
+        word-wrap: normal;
+        inline-size: auto;
+        font-size: 20px;
+        color: #d4d5d5;
+    }
+    .nav-input{
+        width: 420px;
+    }
+    .main-content{
+        padding: 5%;
+    }
+    .content-top>h3{
+        word-wrap: normal;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .content-top-img img{
+        width: 370px;
+    }
+    .circle1{
+        display: none;
+    }
+    .circle2{
+        display: none;
+    }
+    .services{
+        margin: 5%;
+    }
+    .services>h2{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .services .service:nth-child(n){
+        flex-direction: column;
+        align-items: center;
+    }
+    .service>div:last-child h3{
+        padding-top: 60px;
+        word-wrap:normal;
+        inline-size:auto;
+    }
+    .service>div:last-child p{
+        word-wrap: normal;
+        inline-size: auto;
+    }
+    .team{
+        margin: 5%;
+        margin-bottom: 30px;
+    }
+    
+    .team-desc{
+        flex-direction: column;
+        align-items: center;
+    }
+    .team-desc h3{
+        width: 100%;
+    }
+    .team-desc p{
+        color: #464748;
+        margin-left: 0;
+        width: 100%;
+        margin-top: 30px;
+    }
+    .team-members{
+        justify-content: center;
+        row-gap: 50px;
+    }
+    .team>button{
+        margin-left: 30%;
+    }
+    .footer-top{
+        flex-direction: column;
+        padding: 4% 0;
+    }
+    .socialmedia-icons{
+        width: 50%;
+        margin-top: 30px;
+    }
+}
+
+@media screen and (max-width: 460px) {
+    .nav-top{
+        flex-direction: column;
+    }
+    .nav-top>ul{
+        width: 100%;
+        justify-content: center;
+        row-gap: 20px;
+    }
+    .nav-top>button{
+        margin-left: 30%;
+        margin-top: 20px;
+    }
+    .nav-left{
+        height: 300px;
+        width: 200px;
+        margin-left: auto;  
+        margin-right: auto;  
+    }
+    .nav-right h2{
+        font-size: 25px;
+        word-wrap: normal;
+        inline-size: auto;
+        padding: 5%;
+    }
+    .nav-right p{
+        padding: 5%;
+    }
+    .nav-input{
+        width: 80vw;
+        /* flex-direction: column; */
+    }
+    .nav-input button{
+        width: 60px;
+    }
+    .nav-input span{
+        padding-left: 20px;
+        color: #636c79;
+    }
+    .content-top>h3{
+        font-size: 25px;
+    }
+    .numbers-data h4{
+        font-size: 20px;
+    }
+    .content-top-img img{
+        width: 270px;
+    }
+    .service>div:first-child{
+        width: 250px;
+        height: 250px;
+    }
+    .service>div:last-child h3{
+        padding-top: 30px;
+        font-size: 25px;
+    }
+    .team-desc h3{
+        font-size: 25px;
+    }
+    .member-img img{
+        height: 300px;
+        width: 200px;
+    }
+    .footer-top{
+        margin: 0;
+        padding: 4%;
+    }
+    .socialmedia-icons{
+        width: 100%;
+    }
 }
